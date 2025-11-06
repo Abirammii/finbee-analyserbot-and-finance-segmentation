@@ -148,26 +148,30 @@ function App() {
 
   return (
     <div
-      style={{
-        minHeight: "100vh",
-        background: "linear-gradient(180deg, #ba733d 0%,   #6b2b06 100%)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        fontFamily: "Poppins, sans-serif",
-        padding: "40px",
-        boxSizing: "border-box",
-      }}
-    >
+  style={{
+    minHeight: "100vh",
+    background: "linear-gradient(180deg, #ba733d 0%,   #6b2b06 100%)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    fontFamily: "Poppins, sans-serif",
+    padding: window.innerWidth < 768 ? "20px" : "40px",
+    boxSizing: "border-box",
+  }}
+>
+
       <div
-        style={{
-          width: "100%",
-          maxWidth: "1200px",
-          display: "flex",
-          gap: "36px",
-          alignItems: "flex-start",
-        }}
-      >
+  style={{
+    width: "100%",
+    maxWidth: "1200px",
+    display: "flex",
+    gap: "36px",
+    alignItems: "flex-start",
+    flexWrap: "wrap",
+    justifyContent: "center",
+  }}
+>
+
         {/* LEFT COLUMN */}
         <div
           style={{
