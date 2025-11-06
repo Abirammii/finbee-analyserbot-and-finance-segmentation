@@ -150,15 +150,18 @@ function App() {
     <div
   style={{
     minHeight: "100vh",
-    background: "linear-gradient(180deg, #ba733d 0%,   #6b2b06 100%)",
+    width: "100%",
+    background: "linear-gradient(180deg, #ba733d 0%, #6b2b06 100%)",
     display: "flex",
     alignItems: "center",
     justifyContent: "center",
     fontFamily: "Poppins, sans-serif",
-    padding: window.innerWidth < 768 ? "20px" : "40px",
+    padding: window.innerWidth < 768 ? "16px" : "40px",
     boxSizing: "border-box",
+    backgroundAttachment: "fixed", // smooth scroll on mobile
   }}
 >
+
 
       <div
   style={{
