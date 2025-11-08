@@ -1,6 +1,6 @@
 # Financial-Behavior-Segmentation-and-Advisory-Bot  
 ## Project Title: Financial Behavior Segmentation and AI-Driven Investment Advisory System  
----
+
 ### PROJECT OVERVIEW  
 
 - In this project scenario, I am envisioning the role of a data scientist employed by a bank, where I analyzed a Kaggle dataset containing detailed customer information and financial behavior patterns.  
@@ -10,3 +10,17 @@
 - As an extension of this analysis, I developed an AI-powered financial advisory web app called ```FinBee```.  
 - ```FinBee``` acts as a Smart Finance Analyser Bot helping customers evaluate their financial habits based on factors like income, expenses, and savings, and providing instant personalized advice.  
 - This integrated project demonstrates how data science, machine learning, and interactive web development (React) can work together to deliver data-driven financial intelligence for real-world banking use cases.
+
+### MODULES OF THE PROJECT  
+
+1. Exploratory Data Analysis (EDA)  
+2. Feature Engineering & Selection  
+3. Customer Segmentation (Clustering)  
+4. Dimensionality Reduction (PCA & UMAP)  
+5. Recommendation System (Segment Profiling)  
+6. Smart Finance Advisory App (FinBee)
+
+### DATASET DESCRIPTION  
+
+The dataset, sourced from **Kaggle**, provides insights into the financial behavior and engagement patterns of bank customers.  It captures detailed information about customer demographics, credit activity, and account usage over time.  The data enables the identification of distinct customer segments based on their financial habits, supporting better decision-making and personalized financial recommendations.
+
