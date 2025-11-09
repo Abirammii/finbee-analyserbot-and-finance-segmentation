@@ -50,6 +50,11 @@ The dataset, sourced from **Kaggle**, provides insights into the financial behav
 | `AvgUtilization` | Average utilization rate of the customer’s credit limit |
 
 
+### 1. DATA ANALYSIS
+I'll commence by addressing the dataset's cleanliness.
+
+#### A) Describing the Data
+```df.describe().T```
 
 <table border="1" class="dataframe">
   <thead>
@@ -57,12 +62,7 @@ The dataset, sourced from **Kaggle**, provides insights into the financial behav
       <th></th>
       <th>Customer_ID</th>
       <th>Age</th>
-      <th>Gender</th>
       <th>Dependents</th>
-      <th>Education</th>
-      <th>MaritalStatus</th>
-      <th>Income</th>
-      <th>CardType</th>
       <th>Tenure</th>
       <th>RelationshipCount</th>
       <th>InactiveMonths</th>
@@ -79,119 +79,148 @@ The dataset, sourced from **Kaggle**, provides insights into the financial behav
   </thead>
   <tbody>
     <tr>
-      <th>0</th>
-      <td>768805383</td>
-      <td>45</td>
-      <td>M</td>
-      <td>3</td>
-      <td>High School</td>
-      <td>Married</td>
-      <td>$60K - $80K</td>
-      <td>Blue</td>
-      <td>39</td>
-      <td>5</td>
-      <td>1</td>
-      <td>3</td>
-      <td>12691.0</td>
-      <td>777</td>
-      <td>11914.0</td>
-      <td>1.335</td>
-      <td>1144</td>
-      <td>42</td>
-      <td>1.625</td>
-      <td>0.061</td>
+      <th>count</th>
+      <td>1.012700e+04</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
+      <td>10127.000000</td>
     </tr>
     <tr>
-      <th>1</th>
-      <td>818770008</td>
-      <td>49</td>
-      <td>F</td>
-      <td>5</td>
-      <td>Graduate</td>
-      <td>Single</td>
-      <td>Less than $40K</td>
-      <td>Blue</td>
-      <td>44</td>
-      <td>6</td>
-      <td>1</td>
-      <td>2</td>
-      <td>8256.0</td>
-      <td>864</td>
-      <td>7392.0</td>
-      <td>1.541</td>
-      <td>1291</td>
-      <td>33</td>
-      <td>3.714</td>
-      <td>0.105</td>
+      <th>mean</th>
+      <td>7.391776e+08</td>
+      <td>46.325960</td>
+      <td>2.346203</td>
+      <td>35.928409</td>
+      <td>3.812580</td>
+      <td>2.341167</td>
+      <td>2.455317</td>
+      <td>8631.953698</td>
+      <td>1162.814061</td>
+      <td>7469.139637</td>
+      <td>0.759941</td>
+      <td>4404.086304</td>
+      <td>64.858695</td>
+      <td>0.712222</td>
+      <td>0.274894</td>
     </tr>
     <tr>
-      <th>2</th>
-      <td>713982108</td>
-      <td>51</td>
-      <td>M</td>
-      <td>3</td>
-      <td>Graduate</td>
-      <td>Married</td>
-      <td>$80K - $120K</td>
-      <td>Blue</td>
-      <td>36</td>
-      <td>4</td>
-      <td>1</td>
-      <td>0</td>
-      <td>3418.0</td>
-      <td>0</td>
-      <td>3418.0</td>
-      <td>2.594</td>
-      <td>1887</td>
-      <td>20</td>
-      <td>2.333</td>
-      <td>0.000</td>
+      <th>std</th>
+      <td>3.690378e+07</td>
+      <td>8.016814</td>
+      <td>1.298908</td>
+      <td>7.986416</td>
+      <td>1.554408</td>
+      <td>1.010622</td>
+      <td>1.106225</td>
+      <td>9088.776650</td>
+      <td>814.987335</td>
+      <td>9090.685324</td>
+      <td>0.219207</td>
+      <td>3397.129254</td>
+      <td>23.472570</td>
+      <td>0.238086</td>
+      <td>0.275691</td>
     </tr>
     <tr>
-      <th>3</th>
-      <td>769911858</td>
-      <td>40</td>
-      <td>F</td>
-      <td>4</td>
-      <td>High School</td>
-      <td>Unknown</td>
-      <td>Less than $40K</td>
-      <td>Blue</td>
-      <td>34</td>
-      <td>3</td>
-      <td>4</td>
-      <td>1</td>
-      <td>3313.0</td>
-      <td>2517</td>
-      <td>796.0</td>
-      <td>1.405</td>
-      <td>1171</td>
-      <td>20</td>
-      <td>2.333</td>
-      <td>0.760</td>
+      <th>min</th>
+      <td>7.080821e+08</td>
+      <td>26.000000</td>
+      <td>0.000000</td>
+      <td>13.000000</td>
+      <td>1.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
+      <td>1438.300000</td>
+      <td>0.000000</td>
+      <td>3.000000</td>
+      <td>0.000000</td>
+      <td>510.000000</td>
+      <td>10.000000</td>
+      <td>0.000000</td>
+      <td>0.000000</td>
     </tr>
     <tr>
-      <th>4</th>
-      <td>709106358</td>
-      <td>40</td>
-      <td>M</td>
-      <td>3</td>
-      <td>Uneducated</td>
-      <td>Married</td>
-      <td>$60K - $80K</td>
-      <td>Blue</td>
-      <td>21</td>
-      <td>5</td>
-      <td>1</td>
-      <td>0</td>
-      <td>4716.0</td>
-      <td>0</td>
-      <td>4716.0</td>
-      <td>2.175</td>
-      <td>816</td>
-      <td>28</td>
-      <td>2.500</td>
-      <td>0.000</td>
+      <th>25%</th>
+      <td>7.130368e+08</td>
+      <td>41.000000</td>
+      <td>1.000000</td>
+      <td>31.000000</td>
+      <td>3.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>2555.000000</td>
+      <td>359.000000</td>
+      <td>1324.500000</td>
+      <td>0.631000</td>
+      <td>2155.500000</td>
+      <td>45.000000</td>
+      <td>0.582000</td>
+      <td>0.023000</td>
+    </tr>
+    <tr>
+      <th>50%</th>
+      <td>7.179264e+08</td>
+      <td>46.000000</td>
+      <td>2.000000</td>
+      <td>36.000000</td>
+      <td>4.000000</td>
+      <td>2.000000</td>
+      <td>2.000000</td>
+      <td>4549.000000</td>
+      <td>1276.000000</td>
+      <td>3474.000000</td>
+      <td>0.736000</td>
+      <td>3899.000000</td>
+      <td>67.000000</td>
+      <td>0.702000</td>
+      <td>0.176000</td>
+    </tr>
+    <tr>
+      <th>75%</th>
+      <td>7.731435e+08</td>
+      <td>52.000000</td>
+      <td>3.000000</td>
+      <td>40.000000</td>
+      <td>5.000000</td>
+      <td>3.000000</td>
+      <td>3.000000</td>
+      <td>11067.500000</td>
+      <td>1784.000000</td>
+      <td>9859.000000</td>
+      <td>0.859000</td>
+      <td>4741.000000</td>
+      <td>81.000000</td>
+      <td>0.818000</td>
+      <td>0.503000</td>
+    </tr>
+    <tr>
+      <th>max</th>
+      <td>8.283431e+08</td>
+      <td>73.000000</td>
+      <td>5.000000</td>
+      <td>56.000000</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+      <td>6.000000</td>
+      <td>34516.000000</td>
+      <td>2517.000000</td>
+      <td>34516.000000</td>
+      <td>3.397000</td>
+      <td>18484.000000</td>
+      <td>139.000000</td>
+      <td>3.714000</td>
+      <td>0.999000</td>
     </tr>
   </tbody>
 </table>
