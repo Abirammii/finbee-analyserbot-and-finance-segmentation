@@ -276,7 +276,9 @@ cleaning my dataset by converting non-numeric text into real numeric values and 
 ### 2. Data Visualization
 #### A) Countplot
 <Figure size 1000x1250 with 5 Axes><img width="964" height="1214" alt="image" src="https://github.com/user-attachments/assets/8d8b6786-4d51-48e1-b0da-24f31716231d" />
+  
 **Insights**
+
 - Most customers are married and well-educated.
 - Middle-income group forms the largest portion.
 - Blue card is the most commonly used card type.
