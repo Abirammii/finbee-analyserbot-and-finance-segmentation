@@ -272,3 +272,7 @@ Credit_Limit              0
 dtype: int64
 ```
 cleaning my dataset by converting non-numeric text into real numeric values and checking for missing values caused by that conversion.
+
+### 2. Data Visualization
+#### A) Countplot
+<Figure size 1000x1250 with 5 Axes><img width="964" height="1214" alt="image" src="https://github.com/user-attachments/assets/8d8b6786-4d51-48e1-b0da-24f31716231d" />
