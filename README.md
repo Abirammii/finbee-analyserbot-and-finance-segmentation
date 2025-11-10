@@ -247,7 +247,7 @@ Using the Interquartile Range (IQR) method, the following approach was used to d
 - Data points lying below the lower bound or above the upper bound are identified as outliers.
 
 **Outlier Percentage by Feature:**
-
+```
 Outliers in "Age": 0.02%
 Outliers in "Dependents": 0.0%
 Outliers in "Tenure": 3.81%
@@ -262,6 +262,7 @@ Outliers in "TotalTransactionAmount": 8.85%
 Outliers in "TotalTransactionCount": 0.02%
 Outliers in "TransactionChangeRatio": 3.89%
 Outliers in "AvgUtilization": 0.0%
+```
 #### C) Conversion & Imputation
 NaNs per important column:
 TotalTransactionCount     0
