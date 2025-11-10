@@ -225,3 +225,15 @@ I'll commence by addressing the dataset's cleanliness.
   </tbody>
 </table>
 </div>
+
+**Insights**
+- The average customer age is 46 years, indicating a primarily middle-aged segment.
+- Customers usually have 2–3 dependents, reflecting small family sizes.
+- The average tenure is 36 months, showing stable, long-term relationships.
+- The average credit limit is ₹8,600, with wide variation among customers.
+- Revolving balance averages ₹1,163, suggesting moderate outstanding dues.
+- Customers perform about 65 transactions per year with an average spend of ₹4,400.
+- The credit utilization ratio averages 0.27, showing responsible credit usage.
+- The transaction change ratio (0.71) indicates consistent spending habits.
+- Most customers remain active, with only about 2 inactive months on average.
+- The overall pattern supports financial segmentation into high, medium, and low spenders.
