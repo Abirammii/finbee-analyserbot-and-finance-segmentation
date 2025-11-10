@@ -246,12 +246,26 @@ Using the Interquartile Range (IQR) method, the following approach was used to d
 - Determine the upper bound as ```Q3 + 1.5 × IQR```.
 - Data points lying below the lower bound or above the upper bound are identified as outliers.
 
-def outlier_percent(data):
-    Q1 = data.quantile(0.25)
-    Q3 = data.quantile(0.75)
-    IQR = Q3 - Q1
-    lower = Q1 - 1.5 * IQR
-    upper = Q3 + 1.5 * IQR
-    num_outliers = np.sum((data < lower) | (data > upper))
-    total = data.count()
-    return round((num_outliers / total) * 100, 2)
+**Outlier Percentage by Feature:**
+
+Outliers in "Age": 0.02%
+Outliers in "Dependents": 0.0%
+Outliers in "Tenure": 3.81%
+Outliers in "RelationshipCount": 0.0%
+Outliers in "InactiveMonths": 3.27%
+Outliers in "ContactsLast12M": 6.21%
+Outliers in "Credit_Limit": 9.72%
+Outliers in "Total_Revolving_Bal": 0.0%
+Outliers in "Avg_Open_To_Buy": 9.51%
+Outliers in "Total_Amt_Chng_Q4_Q1": 3.91%
+Outliers in "TotalTransactionAmount": 8.85%
+Outliers in "TotalTransactionCount": 0.02%
+Outliers in "TransactionChangeRatio": 3.89%
+Outliers in "AvgUtilization": 0.0%
+#### C) Conversion & Imputation
+NaNs per important column:
+TotalTransactionCount     0
+TotalTransactionAmount    0
+Credit_Limit              0
+dtype: int64
+cleaning my dataset by converting non-numeric text into real numeric values and checking for missing values caused by that conversion.
