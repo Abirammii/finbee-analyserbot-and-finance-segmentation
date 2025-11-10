@@ -237,3 +237,21 @@ I'll commence by addressing the dataset's cleanliness.
 - The transaction change ratio (0.71) indicates consistent spending habits.
 - Most customers remain active, with only about 2 inactive months on average.
 - The overall pattern supports financial segmentation into high, medium, and low spenders.
+
+#### B) Checking for outliers
+Using the Interquartile Range (IQR) method, the following approach was used to detect outliers:
+- Calculate the first quartile (Q1) and third quartile (Q3) for each numerical feature.
+- Compute the IQR = Q3 - Q1.
+- Determine the lower bound as ```Q1 - 1.5 × IQR```.
+- Determine the upper bound as ```Q3 + 1.5 × IQR```.
+- Data points lying below the lower bound or above the upper bound are identified as outliers.
+
+def outlier_percent(data):
+    Q1 = data.quantile(0.25)
+    Q3 = data.quantile(0.75)
+    IQR = Q3 - Q1
+    lower = Q1 - 1.5 * IQR
+    upper = Q3 + 1.5 * IQR
+    num_outliers = np.sum((data < lower) | (data > upper))
+    total = data.count()
+    return round((num_outliers / total) * 100, 2)
