@@ -276,3 +276,14 @@ cleaning my dataset by converting non-numeric text into real numeric values and 
 ### 2. Data Visualization
 #### A) Countplot
 <Figure size 1000x1250 with 5 Axes><img width="964" height="1214" alt="image" src="https://github.com/user-attachments/assets/8d8b6786-4d51-48e1-b0da-24f31716231d" />
+**Insights**
+- Most customers are married and well-educated.
+- Middle-income group forms the largest portion.
+- Blue card is the most commonly used card type.
+- The dataset shows a balanced gender distribution.
+- Customers are mainly from a financially stable background.
+- Higher education levels correlate with higher income groups.
+- Premium cards (Gold, Platinum) are used by fewer customers.
+- The data indicates a target audience of working professionals.
+- Card preference appears linked to income category.
+- The dataset reflects diverse but slightly skewed demographics toward middle-income, educated individuals.
