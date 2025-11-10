@@ -265,8 +265,10 @@ Outliers in "AvgUtilization": 0.0%
 ```
 #### C) Conversion & Imputation
 NaNs per important column:
+```
 TotalTransactionCount     0
 TotalTransactionAmount    0
 Credit_Limit              0
 dtype: int64
+```
 cleaning my dataset by converting non-numeric text into real numeric values and checking for missing values caused by that conversion.
