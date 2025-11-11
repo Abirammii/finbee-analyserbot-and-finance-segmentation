@@ -322,3 +322,43 @@ plt.show()
 - Credit Limit and Avg Utilization are negatively correlated, showing customers with higher credit limits use a smaller portion of it.
 - Total Revolving Balance and Avg Utilization have a positive correlation, suggesting higher balances increase utilization.
 - Most other variables show weak correlations, indicating minimal multicollinearity in the dataset.
+
+### FEATURE ENGINEERING
+```
+# Utilization-based Features
+df['new_CreditUsage_Ratio'] = df['Total_Revolving_Bal'] / (df['Credit_Limit'] + 1)
+df['new_Revolving_to_Available'] = df['Total_Revolving_Bal'] / (df['AvgUtilization'] + 1)
+
+# Transaction-based Features
+df['new_Avg_Transaction_Value'] = df['TotalTransactionAmount'] / (df['TotalTransactionCount'] + 1)
+df['new_Transaction_Efficiency'] = df['TotalTransactionCount'] / (df['Tenure'] + 1)
+df['new_Activity_Level'] = df['TotalTransactionAmount'] / (df['Tenure'] + 1)
+
+#  Behavior-based Ratios
+df['new_Inactive_to_Tenure'] = df['InactiveMonths'] / (df['Tenure'] + 1)
+df['new_Contacts_per_Tenure'] = df['ContactsLast12M'] / (df['Tenure'] + 1)
+df['new_Dependents_to_Relationship'] = df['Dependents'] / (df['RelationshipCount'] + 1)
+
+# Change Indicators
+df['new_TransactionChange_Effect'] = df['TransactionChangeRatio'] * df['TotalTransactionCount']
+df['new_Spending_Change'] = df['TransactionChangeRatio'] * df['TotalTransactionAmount']
+
+#  Financial Strength Indicators
+df['new_Credit_to_Transaction'] = df['Credit_Limit'] / (df['TotalTransactionAmount'] + 1)
+df['new_Balance_to_Transaction'] = df['Total_Revolving_Bal'] / (df['TotalTransactionAmount'] + 1)
+```
+#### Handing Missing Values
+```
+print("Missing values before filling:")
+print(df.isnull().sum().sort_values(ascending=False).head())
+df.fillna(0, inplace=True)
+```
+
+<img width="280" height="134" alt="image" src="https://github.com/user-attachments/assets/ea25a00a-41a2-4ae4-b411-ed2aae6a7a8f" />
+
+####
+```
+if 'Customer_ID' in df.columns:
+    df.set_index('Customer_ID', inplace=True)
+df.head()
+```
