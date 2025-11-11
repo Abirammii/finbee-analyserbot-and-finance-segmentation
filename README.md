@@ -347,18 +347,200 @@ df['new_Spending_Change'] = df['TransactionChangeRatio'] * df['TotalTransactionA
 df['new_Credit_to_Transaction'] = df['Credit_Limit'] / (df['TotalTransactionAmount'] + 1)
 df['new_Balance_to_Transaction'] = df['Total_Revolving_Bal'] / (df['TotalTransactionAmount'] + 1)
 ```
-#### Handing Missing Values
-```
-print("Missing values before filling:")
-print(df.isnull().sum().sort_values(ascending=False).head())
-df.fillna(0, inplace=True)
-```
+**After checking Missing Values, now indexing custimer_ID feature**
 
-<img width="280" height="134" alt="image" src="https://github.com/user-attachments/assets/ea25a00a-41a2-4ae4-b411-ed2aae6a7a8f" />
-
-####
 ```
 if 'Customer_ID' in df.columns:
     df.set_index('Customer_ID', inplace=True)
 df.head()
 ```
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Age</th>
+      <th>Gender</th>
+      <th>Dependents</th>
+      <th>Education</th>
+      <th>MaritalStatus</th>
+      <th>Income</th>
+      <th>CardType</th>
+      <th>Tenure</th>
+      <th>RelationshipCount</th>
+      <th>InactiveMonths</th>
+      <th>...</th>
+      <th>new_Avg_Transaction_Value</th>
+      <th>new_Transaction_Efficiency</th>
+      <th>new_Activity_Level</th>
+      <th>new_Inactive_to_Tenure</th>
+      <th>new_Contacts_per_Tenure</th>
+      <th>new_Dependents_to_Relationship</th>
+      <th>new_TransactionChange_Effect</th>
+      <th>new_Spending_Change</th>
+      <th>new_Credit_to_Transaction</th>
+      <th>new_Balance_to_Transaction</th>
+    </tr>
+    <tr>
+      <th>Customer_ID</th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>768805383</th>
+      <td>45</td>
+      <td>M</td>
+      <td>3</td>
+      <td>High School</td>
+      <td>Married</td>
+      <td>$60K - $80K</td>
+      <td>Blue</td>
+      <td>39</td>
+      <td>5</td>
+      <td>1</td>
+      <td>...</td>
+      <td>26.604651</td>
+      <td>1.050000</td>
+      <td>28.600000</td>
+      <td>0.025000</td>
+      <td>0.075000</td>
+      <td>0.500000</td>
+      <td>68.250</td>
+      <td>1859.000</td>
+      <td>11.083843</td>
+      <td>0.678603</td>
+    </tr>
+    <tr>
+      <th>818770008</th>
+      <td>49</td>
+      <td>F</td>
+      <td>5</td>
+      <td>Graduate</td>
+      <td>Single</td>
+      <td>Less than $40K</td>
+      <td>Blue</td>
+      <td>44</td>
+      <td>6</td>
+      <td>1</td>
+      <td>...</td>
+      <td>37.970588</td>
+      <td>0.733333</td>
+      <td>28.688889</td>
+      <td>0.022222</td>
+      <td>0.044444</td>
+      <td>0.714286</td>
+      <td>122.562</td>
+      <td>4794.774</td>
+      <td>6.390093</td>
+      <td>0.668731</td>
+    </tr>
+    <tr>
+      <th>713982108</th>
+      <td>51</td>
+      <td>M</td>
+      <td>3</td>
+      <td>Graduate</td>
+      <td>Married</td>
+      <td>$80K - $120K</td>
+      <td>Blue</td>
+      <td>36</td>
+      <td>4</td>
+      <td>1</td>
+      <td>...</td>
+      <td>89.857143</td>
+      <td>0.540541</td>
+      <td>51.000000</td>
+      <td>0.027027</td>
+      <td>0.000000</td>
+      <td>0.600000</td>
+      <td>46.660</td>
+      <td>4402.371</td>
+      <td>1.810381</td>
+      <td>0.000000</td>
+    </tr>
+    <tr>
+      <th>769911858</th>
+      <td>40</td>
+      <td>F</td>
+      <td>4</td>
+      <td>High School</td>
+      <td>Unknown</td>
+      <td>Less than $40K</td>
+      <td>Blue</td>
+      <td>34</td>
+      <td>3</td>
+      <td>4</td>
+      <td>...</td>
+      <td>55.761905</td>
+      <td>0.571429</td>
+      <td>33.457143</td>
+      <td>0.114286</td>
+      <td>0.028571</td>
+      <td>1.000000</td>
+      <td>46.660</td>
+      <td>2731.943</td>
+      <td>2.826792</td>
+      <td>2.147611</td>
+    </tr>
+    <tr>
+      <th>709106358</th>
+      <td>40</td>
+      <td>M</td>
+      <td>3</td>
+      <td>Uneducated</td>
+      <td>Married</td>
+      <td>$60K - $80K</td>
+      <td>Blue</td>
+      <td>21</td>
+      <td>5</td>
+      <td>1</td>
+      <td>...</td>
+      <td>28.137931</td>
+      <td>1.272727</td>
+      <td>37.090909</td>
+      <td>0.045455</td>
+      <td>0.000000</td>
+      <td>0.500000</td>
+      <td>70.000</td>
+      <td>2040.000</td>
+      <td>5.772338</td>
+      <td>0.000000</td>
+    </tr>
+  </tbody>
+</table>
+<p>5 rows × 32 columns</p>
+</div>
