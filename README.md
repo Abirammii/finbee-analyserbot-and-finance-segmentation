@@ -292,6 +292,8 @@ cleaning my dataset by converting non-numeric text into real numeric values and 
 
 #### B) Histogram representation of Numeric feature
 <Figure size 1500x1000 with 12 Axes><img width="1223" height="913" alt="image" src="https://github.com/user-attachments/assets/c219965c-56e2-4448-9ba4-d4e50c8600be" />
+
+  
 - The ```age``` distribution shows that most customers are between 35–55 years, representing the prime working-age group.
 - Dependents are mostly between 1–3, suggesting customers tend to have small family sizes.
 - ```Tenure``` is centered around 35–40 months, showing stable, long-term customer relationships.
