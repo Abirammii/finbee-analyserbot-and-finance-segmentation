@@ -289,3 +289,7 @@ cleaning my dataset by converting non-numeric text into real numeric values and 
 - The data indicates a target audience of working professionals.
 - Card preference appears linked to income category.
 - The dataset reflects diverse but slightly skewed demographics toward middle-income, educated individuals.
+
+#### B) Histogram representation of Numeric feature
+<Figure size 1500x1000 with 12 Axes><img width="1223" height="913" alt="image" src="https://github.com/user-attachments/assets/c219965c-56e2-4448-9ba4-d4e50c8600be" />
+
