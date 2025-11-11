@@ -306,3 +306,12 @@ cleaning my dataset by converting non-numeric text into real numeric values and 
 - Transaction change ratio is concentrated below 1, showing consistent transaction patterns with few high fluctuations.
 - The relationship count distribution indicates that most customers hold 3–4 active relationships with the bank.
 - Overall, numerical distributions highlight a customer base that is financially active, moderately engaged, and skewed toward conservative spending and credit usage.
+
+#### C) Heatmap (Correlation Analysis)
+```
+plt.figure(figsize=(20,8))
+sns.heatmap(df.corr(numeric_only=True), cmap="coolwarm", annot=True)
+plt.title("Correlation Heatmap")
+plt.show()
+```
+<Figure size 2000x800 with 2 Axes><img width="1570" height="821" alt="image" src="https://github.com/user-attachments/assets/74eaa7d1-8611-48b4-9e57-26cb6730c9cc" />
