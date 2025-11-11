@@ -274,7 +274,7 @@ dtype: int64
 cleaning my dataset by converting non-numeric text into real numeric values and checking for missing values caused by that conversion.
 
 ### 2. Data Visualization
-#### A) Countplot
+#### A) Countplot Representation of Categorical feature
 <Figure size 1000x1250 with 5 Axes><img width="964" height="1214" alt="image" src="https://github.com/user-attachments/assets/8d8b6786-4d51-48e1-b0da-24f31716231d" />
   
 **Insights**
@@ -315,3 +315,10 @@ plt.title("Correlation Heatmap")
 plt.show()
 ```
 <Figure size 2000x800 with 2 Axes><img width="1570" height="821" alt="image" src="https://github.com/user-attachments/assets/74eaa7d1-8611-48b4-9e57-26cb6730c9cc" />
+
+**Insights**
+- Age and Tenure show a strong positive correlation (0.79), meaning older customers usually have longer relationships with the bank.
+- Total Transaction Amount and Transaction Count are highly correlated (0.81), indicating frequent transactions lead to higher spending.
+- Credit Limit and Avg Utilization are negatively correlated, showing customers with higher credit limits use a smaller portion of it.
+- Total Revolving Balance and Avg Utilization have a positive correlation, suggesting higher balances increase utilization.
+- Most other variables show weak correlations, indicating minimal multicollinearity in the dataset.
