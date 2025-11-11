@@ -292,4 +292,13 @@ cleaning my dataset by converting non-numeric text into real numeric values and 
 
 #### B) Histogram representation of Numeric feature
 <Figure size 1500x1000 with 12 Axes><img width="1223" height="913" alt="image" src="https://github.com/user-attachments/assets/c219965c-56e2-4448-9ba4-d4e50c8600be" />
-
+- The ```age``` distribution shows that most customers are between 35–55 years, representing the prime working-age group.
+- Dependents are mostly between 1–3, suggesting customers tend to have small family sizes.
+- ```Tenure``` is centered around 35–40 months, showing stable, long-term customer relationships.
+- ```Inactive months``` and ```contactLast12M``` frequency are generally low, indicating limited customer engagement in recent periods.
+- Credit limit shows a right-skewed distribution, with most customers having lower credit limits and a few with very high ones.
+- ```Total_revolving_bal``` and ```avgutilization``` also show right skewness, implying most users maintain low outstanding balances.
+- ```Total transaction amount``` and count suggest that moderate to high transaction activity is common among customers.
+- ```Transaction change ratio``` is concentrated below 1, showing consistent transaction patterns with few high fluctuations.
+- The relationship count distribution indicates that most customers hold 3–4 active relationships with the bank.
+- Overall, numerical distributions highlight a customer base that is financially active, moderately engaged, and skewed toward conservative spending and credit usage.
