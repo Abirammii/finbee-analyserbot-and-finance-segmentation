@@ -533,4 +533,32 @@ df.head()
 <p>5 rows × 32 columns</p>
 </div>
 
+```# Function to calculate outlier thresholds for a given variable
+def outlier_thresholds(dataframe, variable):
+    quartile1 = dataframe[variable].quantile(0.25)
+    quartile3 = dataframe[variable].quantile(0.75)
+    interquartile_range = quartile3 - quartile1
+    up_limit = quartile3 + 1.5 * interquartile_range
+    low_limit = quartile1 - 1.5 * interquartile_range
+    return low_limit, up_limit
+# Function to cap outliers at threshold limits
+def replace_with_thresholds(dataframe, variable):
+    low_limit, up_limit = outlier_thresholds(dataframe, variable)
+    dataframe.loc[dataframe[variable] < low_limit, variable] = low_limit
+    dataframe.loc[dataframe[variable] > up_limit, variable] = up_limit
+# Applying outlier capping to all numerical columns
+for col in df.select_dtypes(include=["float64", "int64"]).columns:
+    replace_with_thresholds(df, col)
+```
+
+```
+plt.figure(figsize=(12,6))
+sns.boxplot(data=df)
+plt.xticks(rotation=90)
+plt.show()
+```
+
+<Figure size 1200x600 with 1 Axes><img width="1003" height="729" alt="image" src="https://github.com/user-attachments/assets/1ff10b79-f63a-46d9-9e50-1bec1883e076" />
+
+
 ### CLUSTERING TECHNIQUES
