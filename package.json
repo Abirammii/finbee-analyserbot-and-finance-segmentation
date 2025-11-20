@@ -1,5 +1,6 @@
 {
   "name": "smart-finance-chat",
+  "homepage": "https://github.com/Abirammii/finbee-analyserbot-and-finance-segmentation",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
