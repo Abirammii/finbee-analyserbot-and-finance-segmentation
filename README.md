@@ -18,9 +18,8 @@
 1. Exploratory Data Analysis (EDA)
 2. Data Visualization 
 3. Feature Engineering   
-4. Hierarchical Clustering
-5. KMeans Clustering 
-6. Cluster Performance and Comparison 
+4. Clustering Techniques
+6. Performance and Comparison of Clusters
 7. Smart Finance Advisory App (FinBee)
 
 ### DATASET DESCRIPTION  
@@ -410,8 +409,8 @@ plt.show()
 <Figure size 1200x600 with 1 Axes><img width="1003" height="729" alt="image" src="https://github.com/user-attachments/assets/1ff10b79-f63a-46d9-9e50-1bec1883e076" />
 
 
-
-## 4.Hierarchial Clustering 
+## 4. Clusteing Techniques
+## 4.1 Hierarchial Clustering 
 #### A) Dendrogram
 ```
 linked = linkage(X_scaled, method='ward')
@@ -434,7 +433,7 @@ Therefore, we see the optimal number of clusters for this particular dataset wou
 #### c) Visualization
 <Figure size 1000x700 with 1 Axes><img width="848" height="629" alt="image" src="https://github.com/user-attachments/assets/7d8c5795-846d-40e2-8168-029f85166c11" />
 
-### 5. KMeans Clustering
+### 4.2 KMeans Clustering
 #### A) Silhouette Score Method
 <img width="294" height="188" alt="image" src="https://github.com/user-attachments/assets/753c1a95-7a04-4a2d-b3cb-3b1f9f2cc857" />
 
