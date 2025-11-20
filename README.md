@@ -442,7 +442,7 @@ Therefore, we see the optimal number of clusters for this particular dataset wou
 <Figure size 800x500 with 1 Axes><img width="712" height="475" alt="image" src="https://github.com/user-attachments/assets/a1d0d2ca-0260-446d-8032-e5444068436c" />
   
 **Insights**
-Therefore, we see the optimal number of clusters for this particular dataset would be 3 or 4. Let us now build and visualize the clustering model for k =3.
+Therefore, we see the optimal number of clusters for this particular dataset would be 3 or 5. Let us now build and visualize the clustering model for k =3.
 #### B) Visualization
 <Figure size 800x600 with 1 Axes><img width="693" height="552" alt="image" src="https://github.com/user-attachments/assets/b2974c30-00c5-4695-b64c-09889faadc0a" />
 
