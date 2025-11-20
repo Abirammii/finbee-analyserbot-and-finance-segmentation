@@ -9,7 +9,7 @@
 - As an extension of this analysis, I developed an  financial analyzer  web app called <span style="color:#4b8bff">
   <a href="https://abirammii.github.io/finbee-analyserbot-and-finance-segmentation/" target="_blank">FINBEE</a>
 </span>
-.  
+ 
 - ```FinBee``` acts as a Smart Finance Analyser Bot helping customers evaluate their financial habits based on factors like income, expenses, and savings, and providing instant personalized advice.  
 - This integrated project demonstrates how data science, machine learning, and interactive web development (React) can work together to deliver data-driven financial intelligence for real-world banking use cases.
 
