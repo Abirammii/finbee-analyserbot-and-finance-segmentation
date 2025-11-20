@@ -561,4 +561,63 @@ plt.show()
 <Figure size 1200x600 with 1 Axes><img width="1003" height="729" alt="image" src="https://github.com/user-attachments/assets/1ff10b79-f63a-46d9-9e50-1bec1883e076" />
 
 
-### CLUSTERING TECHNIQUES
+## CLUSTERING TECHNIQUES
+### 1.Hierarchial Clustering 
+#### A) Dendrogram
+```
+linked = linkage(X_scaled, method='ward')
+plt.figure(figsize=(12, 6))
+dendrogram(linked,
+           truncate_mode='level',   # Shows cleaner tree
+           p=5)                     # Number of levels to show 
+plt.title('Hierarchical Clustering Dendrogram')
+plt.xlabel('Samples')
+plt.ylabel('Distance')
+plt.show()
+```
+<Figure size 1200x600 with 1 Axes><img width="1009" height="566" alt="image" src="https://github.com/user-attachments/assets/10c20b04-0501-4080-8709-6f1da068a749" />
+  
+#### B) Silhouette Score
+<img width="298" height="292" alt="image" src="https://github.com/user-attachments/assets/aac0dddb-e89f-4f92-9238-53fb96c5a40f" />
+
+**Insights** 
+Therefore, we see the optimal number of clusters for this particular dataset would be 3 or 4. Let us now build and visualize the clustering model for k = 4.
+#### c) Visualization
+<Figure size 1000x700 with 1 Axes><img width="848" height="629" alt="image" src="https://github.com/user-attachments/assets/364aefd5-9fd9-404a-a221-4289ada6b665" />
+
+### 2. KMeans Clustering
+#### A) Silhouette Score Method
+<img width="294" height="188" alt="image" src="https://github.com/user-attachments/assets/753c1a95-7a04-4a2d-b3cb-3b1f9f2cc857" />
+
+<Figure size 800x500 with 1 Axes><img width="712" height="475" alt="image" src="https://github.com/user-attachments/assets/a1d0d2ca-0260-446d-8032-e5444068436c" />
+  
+**Insights**
+Therefore, we see the optimal number of clusters for this particular dataset would be 3 or 4. Let us now build and visualize the clustering model for k =3.
+#### B) Visualization
+<Figure size 800x600 with 1 Axes><img width="693" height="552" alt="image" src="https://github.com/user-attachments/assets/b2974c30-00c5-4695-b64c-09889faadc0a" />
+
+## 5. Cluster Performance
+### A) Hierarchial Performance
+<img width="296" height="101" alt="image" src="https://github.com/user-attachments/assets/baadc273-3467-446d-8c83-c2b5e739acfb" />
+
+### B) K-Means Performance
+<img width="292" height="95" alt="image" src="https://github.com/user-attachments/assets/e3ab92e8-0f0a-4d0b-9be4-17a6b0286627" />
+
+## 6. Cluster comparison
+```
+results = {
+    'Model': ['K-Means', 'Hierarchical'],
+    'Optimal k': [3, 4],
+    'Silhouette Score': [sil_kmeans, sil_hier],
+    'Calinski-Harabasz Score': [ch_kmeans, ch_hier],
+    'Davies-Bouldin Score': [db_kmeans, db_hier]
+}
+comparison_df = pd.DataFrame(results)
+print(comparison_df)
+```
+
+
+
+
+
+
