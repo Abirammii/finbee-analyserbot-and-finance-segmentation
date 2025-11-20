@@ -19,8 +19,8 @@
 2. Data Visualization 
 3. Feature Engineering   
 4. Clustering Techniques
-6. Performance and Comparison of Clusters
-7. Smart Finance Advisory App (FinBee)
+5. Performance and Comparison of Clusters
+6. Smart Finance Advisory App (FinBee)
 
 ### DATASET DESCRIPTION  
 
@@ -479,8 +479,21 @@ print(comparison_df)
   
 - This indicates that K-Means produced **more compact, better-separated, and more meaningful clusters**, while Hierarchical clustering showed higher overlap between groups and weaker structure. Therefore, **K-Means was selected as the final model**, as it generated clearer and more actionable customer segments suitable for real-world financial analysis and recommendation systems.
 
-
-
-
+## 6. Smart Finance Advisory App (FinBee)
+FinBee acts as an intelligent financial analysis assistant that evaluates a user’s **monthly salary, total spending,** and **savings** to understand their financial behavior. Once the user enters their data, FinBee performs spending analysis and identifies how their income is distributed.
+### Automated Financial Profiling
+Based on the analysis, FinBee assigns the user to a suitable financial category (for example, “Starter Saver Plan”) that reflects their current financial habits and stability level.
+### Visual Financial Insights
+At the end of the analysis, FinBee presents the results through clear visualizations:
+1. Donut Chart showing the breakdown of
+- Monthly Expenses
+- Savings
+- Remaining Balance
+2. Line Chart displaying saving tips, weekly or monthly improvement trends, and how the user can gradually increase savings over time.
+### provides Actionable Advice
+Along with visual analytics, FinBee provides personalized suggestions such as:
+- Smart budget planning
+- SIP and mutual fund recommendations
+- Expense management practices
 
 
