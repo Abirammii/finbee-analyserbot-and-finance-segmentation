@@ -583,7 +583,7 @@ plt.show()
 **Insights** 
 Therefore, we see the optimal number of clusters for this particular dataset would be 3 or 4. Let us now build and visualize the clustering model for k = 4.
 #### c) Visualization
-<Figure size 1000x700 with 1 Axes><img width="848" height="629" alt="image" src="https://github.com/user-attachments/assets/364aefd5-9fd9-404a-a221-4289ada6b665" />
+<Figure size 1000x700 with 1 Axes><img width="848" height="629" alt="image" src="https://github.com/user-attachments/assets/7d8c5795-846d-40e2-8168-029f85166c11" />
 
 ### 2. KMeans Clustering
 #### A) Silhouette Score Method
@@ -600,7 +600,7 @@ Therefore, we see the optimal number of clusters for this particular dataset wou
 
 ## 5. Cluster Performance
 ### A) Hierarchial Performance
-<img width="296" height="101" alt="image" src="https://github.com/user-attachments/assets/baadc273-3467-446d-8c83-c2b5e739acfb" />
+<img width="290" height="100" alt="image" src="https://github.com/user-attachments/assets/ebe92762-4108-4b98-a29c-5cd83af0ea6c" />
 
 ### B) K-Means Performance
 <img width="292" height="95" alt="image" src="https://github.com/user-attachments/assets/e3ab92e8-0f0a-4d0b-9be4-17a6b0286627" />
@@ -609,7 +609,7 @@ Therefore, we see the optimal number of clusters for this particular dataset wou
 ```
 results = {
     'Model': ['K-Means', 'Hierarchical'],
-    'Optimal k': [3, 4],
+    'Optimal k': [3, 5],
     'Silhouette Score': [sil_kmeans, sil_hier],
     'Calinski-Harabasz Score': [ch_kmeans, ch_hier],
     'Davies-Bouldin Score': [db_kmeans, db_hier]
@@ -617,6 +617,8 @@ results = {
 comparison_df = pd.DataFrame(results)
 print(comparison_df)
 ```
+
+<img width="550" height="143" alt="image" src="https://github.com/user-attachments/assets/5245d863-5ed1-4ad4-a0be-58f143efc42e" />
 
 
 
