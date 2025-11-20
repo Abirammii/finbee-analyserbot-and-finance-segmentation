@@ -446,14 +446,15 @@ Therefore, we see the optimal number of clusters for this particular dataset wou
 #### B) Visualization
 <Figure size 800x600 with 1 Axes><img width="693" height="552" alt="image" src="https://github.com/user-attachments/assets/b2974c30-00c5-4695-b64c-09889faadc0a" />
 
-## 5. Cluster Performance
-### A) Hierarchial Performance
+## 5. Cluster Performance and comparison
+### 5.1 Cluster Performance
+#### A) Hierarchial Performance
 <img width="290" height="100" alt="image" src="https://github.com/user-attachments/assets/ebe92762-4108-4b98-a29c-5cd83af0ea6c" />
 
-### B) K-Means Performance
+#### B) K-Means Performance
 <img width="292" height="95" alt="image" src="https://github.com/user-attachments/assets/e3ab92e8-0f0a-4d0b-9be4-17a6b0286627" />
 
-## 6. Cluster comparison
+### 5.2 Cluster comparison
 ```
 results = {
     'Model': ['K-Means', 'Hierarchical'],
