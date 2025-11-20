@@ -581,7 +581,7 @@ plt.show()
 <img width="298" height="292" alt="image" src="https://github.com/user-attachments/assets/aac0dddb-e89f-4f92-9238-53fb96c5a40f" />
 
 **Insights** 
-Therefore, we see the optimal number of clusters for this particular dataset would be 3 or 4. Let us now build and visualize the clustering model for k = 4.
+Therefore, we see the optimal number of clusters for this particular dataset would be 3 or 5. Let us now build and visualize the clustering model for k = 5.
 #### c) Visualization
 <Figure size 1000x700 with 1 Axes><img width="848" height="629" alt="image" src="https://github.com/user-attachments/assets/7d8c5795-846d-40e2-8168-029f85166c11" />
 
