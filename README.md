@@ -6,7 +6,7 @@
 - In this project scenario, I am envisioning the role of a data scientist employed by a bank, where I analyzed a Kaggle dataset containing detailed customer information and financial behavior patterns.  
 - The dataset provides comprehensive insights into customer-level attributes such as ```Age```, ```Gender```, ```Education```, ```Marital Status```, ```Income Range```, ```Card Type```, ```Tenure```, ```Credit Limit```, ```Transaction Behavior```, and ```Utilization Rate```.  
 - The main objective of this project was to identify distinct financial behavior segments among customers using exploratory data analysis (EDA), feature engineering, and Advanced clustering techniques.   
-- As an extension of this analysis, I developed an  financial analyzer  web app called <span style="color:#4b8bff">
+- As an extension of this analysis, I developed an  financial analyzer  web app called <span style="color:#452829">
   <a href="https://abirammii.github.io/finbee-analyserbot-and-finance-segmentation/" target="_blank">FINBEE</a>
 </span>
  
@@ -15,12 +15,13 @@
 
 ### MODULES OF THE PROJECT  
 
-1. Exploratory Data Analysis (EDA)  
-2. Feature Engineering & Selection  
-3. Customer Segmentation (Clustering)  
-4. Dimensionality Reduction (PCA & UMAP)  
-5. Recommendation System (Segment Profiling)  
-6. Smart Finance Advisory App (FinBee)
+1. Exploratory Data Analysis (EDA)
+2. Data Visualization 
+3. Feature Engineering   
+4. Hierarchical Clustering
+5. KMeans Clustering 
+6. Cluster Performance and Comparison 
+7. Smart Finance Advisory App (FinBee)
 
 ### DATASET DESCRIPTION  
 
@@ -52,7 +53,7 @@ The dataset, sourced from **Kaggle**, provides insights into the financial behav
 | `AvgUtilization` | Average utilization rate of the customer’s credit limit |
 
 
-### 1. DATA ANALYSIS
+### 1. EXPLORATRY DATA ANALYSIS
 I'll commence by addressing the dataset's cleanliness. This involves identifying and managing null values, addressing outliers, and ensuring the consistency of the data.
 
 #### A) Describing the Data
@@ -105,7 +106,7 @@ Outliers in "AvgUtilization": 0.0%
 #### Outliers Removal
 <img width="351" height="77" alt="image" src="https://github.com/user-attachments/assets/0f4f89eb-7e52-4199-883a-4f5a268dc93e" />
 
-#### C) Conversion & Imputation
+#### D) Conversion & Imputation
 NaNs per important column:
 ```
 TotalTransactionCount     0
@@ -165,30 +166,36 @@ plt.show()
 - Total Revolving Balance and Avg Utilization have a positive correlation, suggesting higher balances increase utilization.
 - Most other variables show weak correlations, indicating minimal multicollinearity in the dataset.
 
-### FEATURE ENGINEERING
+### 3. FEATURE ENGINEERING
 ```
 # Utilization-based Features
-df['new_CreditUsage_Ratio'] = df['Total_Revolving_Bal'] / (df['Credit_Limit'] + 1)
-df['new_Revolving_to_Available'] = df['Total_Revolving_Bal'] / (df['AvgUtilization'] + 1)
+df["new_CreditUsage_Ratio"] = df["Total_Revolving_Bal"] / df["Credit_Limit"]
+df["new_Revolving_to_Available"] = df["Total_Revolving_Bal"] / df["AvgUtilization"]
 
 # Transaction-based Features
-df['new_Avg_Transaction_Value'] = df['TotalTransactionAmount'] / (df['TotalTransactionCount'] + 1)
-df['new_Transaction_Efficiency'] = df['TotalTransactionCount'] / (df['Tenure'] + 1)
-df['new_Activity_Level'] = df['TotalTransactionAmount'] / (df['Tenure'] + 1)
+df["new_Avg_Transaction_Value"] = df["TotalTransactionAmount"] / df["TotalTransactionCount"]
+df["new_Transaction_Efficiency"] = df["TotalTransactionCount"] / df["Tenure"]
+df["new_Activity_Level"] = df["TotalTransactionAmount"] / df["Tenure"]
 
-#  Behavior-based Ratios
-df['new_Inactive_to_Tenure'] = df['InactiveMonths'] / (df['Tenure'] + 1)
-df['new_Contacts_per_Tenure'] = df['ContactsLast12M'] / (df['Tenure'] + 1)
-df['new_Dependents_to_Relationship'] = df['Dependents'] / (df['RelationshipCount'] + 1)
+# Behavior-based Ratios
+df["new_Inactive_to_Tenure"] = df["InactiveMonths"] / df["Tenure"]
+df["new_Contacts_per_Tenure"] = df["ContactsLast12M"] / df["Tenure"]
+df["new_Dependents_to_Relationship"] = df["Dependents"] / df["RelationshipCount"]
 
 # Change Indicators
-df['new_TransactionChange_Effect'] = df['TransactionChangeRatio'] * df['TotalTransactionCount']
-df['new_Spending_Change'] = df['TransactionChangeRatio'] * df['TotalTransactionAmount']
+df["new_TransactionChange_Effect"] = df["TransactionChangeRatio"] * df["TotalTransactionCount"]
+df["new_Spending_Change"] = df["TransactionChangeRatio"] * df["TotalTransactionAmount"]
 
-#  Financial Strength Indicators
-df['new_Credit_to_Transaction'] = df['Credit_Limit'] / (df['TotalTransactionAmount'] + 1)
-df['new_Balance_to_Transaction'] = df['Total_Revolving_Bal'] / (df['TotalTransactionAmount'] + 1)
+# Financial Strength Indicators
+df["new_Credit_to_Transaction"] = df["Credit_Limit"] / df["TotalTransactionAmount"]
+df["new_Balance_to_Transaction"] = df["Total_Revolving_Bal"] / df["TotalTransactionAmount"]
 ```
+```
+# Check Missing Values after Feature Engineering
+df.isnull().sum().sort_values(ascending=False).head()
+```
+<img width="283" height="130" alt="image" src="https://github.com/user-attachments/assets/a9df35ba-8fbc-4f3a-97c2-fc9025ebdf27" />
+
 **After checking Missing Values, now indexing custimer_ID feature**
 
 ```
@@ -403,8 +410,8 @@ plt.show()
 <Figure size 1200x600 with 1 Axes><img width="1003" height="729" alt="image" src="https://github.com/user-attachments/assets/1ff10b79-f63a-46d9-9e50-1bec1883e076" />
 
 
-## CLUSTERING TECHNIQUES
-### 1.Hierarchial Clustering 
+
+## 4.Hierarchial Clustering 
 #### A) Dendrogram
 ```
 linked = linkage(X_scaled, method='ward')
