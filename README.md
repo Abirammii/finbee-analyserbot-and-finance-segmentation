@@ -588,7 +588,15 @@ Therefore, we see the optimal number of clusters for this particular dataset wou
 ### 2. KMeans Clustering
 #### A) Silhouette Score Method
 <img width="294" height="188" alt="image" src="https://github.com/user-attachments/assets/753c1a95-7a04-4a2d-b3cb-3b1f9f2cc857" />
-
+```
+plt.figure(figsize=(8,5))
+plt.plot(list(sil_scores.keys()), list(sil_scores.values()), marker='o')
+plt.title('Silhouette Score Method')
+plt.xlabel('Number of Clusters (k)')
+plt.ylabel('Silhouette Score')
+plt.grid(True)
+plt.show()
+```
 <Figure size 800x500 with 1 Axes><img width="712" height="475" alt="image" src="https://github.com/user-attachments/assets/a1d0d2ca-0260-446d-8032-e5444068436c" />
   
 **Insights**
