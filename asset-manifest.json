@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/finbee-analyser-bot/static/css/main.31d6cfe0.css",
-    "main.js": "/finbee-analyser-bot/static/js/main.a91c8134.js",
-    "static/media/chatbg.png": "/finbee-analyser-bot/static/media/chatbg.3ac2968929e49471f266.png",
-    "static/media/finbee.png": "/finbee-analyser-bot/static/media/finbee.1857d4ce5acfd71f645b.png",
-    "index.html": "/finbee-analyser-bot/index.html",
-    "main.a91c8134.js.map": "/finbee-analyser-bot/static/js/main.a91c8134.js.map"
+    "main.css": "/finbee-analyserbot-and-finance-segmentation/static/css/main.31d6cfe0.css",
+    "main.js": "/finbee-analyserbot-and-finance-segmentation/static/js/main.63754134.js",
+    "static/media/chatbg.png": "/finbee-analyserbot-and-finance-segmentation/static/media/chatbg.3ac2968929e49471f266.png",
+    "static/media/finbee.png": "/finbee-analyserbot-and-finance-segmentation/static/media/finbee.1857d4ce5acfd71f645b.png",
+    "index.html": "/finbee-analyserbot-and-finance-segmentation/index.html",
+    "main.63754134.js.map": "/finbee-analyserbot-and-finance-segmentation/static/js/main.63754134.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.a91c8134.js"
+    "static/js/main.63754134.js"
   ]
 }
