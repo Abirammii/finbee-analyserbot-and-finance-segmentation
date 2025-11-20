@@ -6,7 +6,7 @@
 - In this project scenario, I am envisioning the role of a data scientist employed by a bank, where I analyzed a Kaggle dataset containing detailed customer information and financial behavior patterns.  
 - The dataset provides comprehensive insights into customer-level attributes such as ```Age```, ```Gender```, ```Education```, ```Marital Status```, ```Income Range```, ```Card Type```, ```Tenure```, ```Credit Limit```, ```Transaction Behavior```, and ```Utilization Rate```.  
 - The main objective of this project was to identify distinct financial behavior segments among customers using exploratory data analysis (EDA), feature engineering, and Advanced clustering techniques.   
-- As an extension of this analysis, I developed an  financial analyzer  web app called <span style="color:#452829">
+- As an extension of this analysis, I developed an  financial analyzer  web app called <span style="color: #452829">
   <a href="https://abirammii.github.io/finbee-analyserbot-and-finance-segmentation/" target="_blank">FINBEE</a>
 </span>
  
@@ -434,7 +434,7 @@ Therefore, we see the optimal number of clusters for this particular dataset wou
 #### c) Visualization
 <Figure size 1000x700 with 1 Axes><img width="848" height="629" alt="image" src="https://github.com/user-attachments/assets/7d8c5795-846d-40e2-8168-029f85166c11" />
 
-### 2. KMeans Clustering
+### 5. KMeans Clustering
 #### A) Silhouette Score Method
 <img width="294" height="188" alt="image" src="https://github.com/user-attachments/assets/753c1a95-7a04-4a2d-b3cb-3b1f9f2cc857" />
 
