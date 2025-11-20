@@ -620,6 +620,15 @@ print(comparison_df)
 
 <img width="550" height="143" alt="image" src="https://github.com/user-attachments/assets/5245d863-5ed1-4ad4-a0be-58f143efc42e" />
 
+### Model Comparison Summary
+
+K-Means provided better customer segmentation results compared to Hierarchical Clustering. After preprocessing and PCA, K-Means demonstrated:
+
+* Higher Silhouette Score
+* Higher Calinski–Harabasz Score
+* Lower Davies–Bouldin Score
+This indicates that K-Means produced **more compact, better-separated, and more meaningful clusters**, while Hierarchical clustering showed higher overlap between groups and weaker structure. Therefore, **K-Means was selected as the final model**, as it generated clearer and more actionable customer segments suitable for real-world financial analysis and recommendation systems.
+
 
 
 
