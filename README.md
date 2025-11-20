@@ -6,7 +6,7 @@
 - In this project scenario, I am envisioning the role of a data scientist employed by a bank, where I analyzed a Kaggle dataset containing detailed customer information and financial behavior patterns.  
 - The dataset provides comprehensive insights into customer-level attributes such as ```Age```, ```Gender```, ```Education```, ```Marital Status```, ```Income Range```, ```Card Type```, ```Tenure```, ```Credit Limit```, ```Transaction Behavior```, and ```Utilization Rate```.  
 - The main objective of this project was to identify distinct financial behavior segments among customers using exploratory data analysis (EDA), feature engineering, and Advanced clustering techniques.   
-- As an extension of this analysis, I developed an  financial analyzer  web app called <span style="color: #452829">
+- As an extension of this analysis, I developed an  financial analyzer  web app called <span style="color: #7f5539">
   <a href="https://abirammii.github.io/finbee-analyserbot-and-finance-segmentation/" target="_blank">FINBEE</a>
 </span>
  
