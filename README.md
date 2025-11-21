@@ -4,7 +4,7 @@
 ### PROJECT OVERVIEW  
 
 - In this project, I assume the role of a Data Scientist in a banking institution, where I analyzed detailed financial behavior and customer attributes from banking records, and also developed a web-based application that enables customers to evaluate and understand their own financial habits.
--The primary objective of the project was to uncover distinct financial behavior segments among customers using Exploratory Data Analysis (EDA), feature engineering, and advanced clustering techniques. Multiple clustering models were evaluated and compared using metrics like silhouette score, and the model with the highest performance was chosen for segmentation.
+- The primary objective of the project was to uncover distinct financial behavior segments among customers using ```Exploratory Data Analysis (EDA)```, ```feature engineering```, and ```advanced clustering technique```s. Multiple clustering models were evaluated and compared using metrics like silhouette score, and the model with the highest performance was chosen for segmentation.
 - As a practical extension of the analysis, I built a financial analyzer web application called <span style="color: #7f5539">
   <a href="https://abirammii.github.io/finbee-analyserbot-and-finance-segmentation/" target="_blank">FINBEE</a>
 </span>. FinBee acts as a Smart Financial Advisor Bot that evaluates a user’s monthly income, expenses, and savings, and instantly provides personalized recommendations. It visually represents the financial distribution using charts and suggests saving plans, investment ideas, and budgeting strategies tailored to the user’s profile.
