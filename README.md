@@ -3,15 +3,13 @@
 
 ### PROJECT OVERVIEW  
 
-- In this project scenario, I am envisioning the role of a data scientist employed by a bank, where I analyzed a Kaggle dataset containing detailed customer information and financial behavior patterns.  
-- The dataset provides comprehensive insights into customer-level attributes such as ```Age```, ```Gender```, ```Education```, ```Marital Status```, ```Income Range```, ```Card Type```, ```Tenure```, ```Credit Limit```, ```Transaction Behavior```, and ```Utilization Rate```.  
-- The main objective of this project was to identify distinct financial behavior segments among customers using exploratory data analysis (EDA), feature engineering, and Advanced clustering techniques.   
-- As an extension of this analysis, I developed an  financial analyzer  web app called <span style="color: #7f5539">
+- In this project, I assume the role of a Data Scientist in a banking institution, where I analyzed detailed financial behavior and customer attributes from banking records, and also developed a web-based application that enables customers to evaluate and understand their own financial habits.
+-The primary objective of the project was to uncover distinct financial behavior segments among customers using Exploratory Data Analysis (EDA), feature engineering, and advanced clustering techniques. Multiple clustering models were evaluated and compared using metrics like silhouette score, and the model with the highest performance was chosen for segmentation.
+- As a practical extension of the analysis, I built a financial analyzer web application called <span style="color: #7f5539">
   <a href="https://abirammii.github.io/finbee-analyserbot-and-finance-segmentation/" target="_blank">FINBEE</a>
-</span>
- 
-- ```FinBee``` acts as a Smart Finance Analyser Bot helping customers evaluate their financial habits based on factors like income, expenses, and savings, and providing instant personalized advice.  
-- This integrated project demonstrates how data science, machine learning, and interactive web development (React) can work together to deliver data-driven financial intelligence for real-world banking use cases.
+</span>. FinBee acts as a Smart Financial Advisor Bot that evaluates a user’s monthly income, expenses, and savings, and instantly provides personalized recommendations. It visually represents the financial distribution using charts and suggests saving plans, investment ideas, and budgeting strategies tailored to the user’s profile.
+- This integrated project demonstrates how data science, machine learning, and modern web development (React) can work together to deliver real-time financial intelligence and enhance customer experience for real-world banking use cases.
+
 
 ### MODULES OF THE PROJECT  
 
