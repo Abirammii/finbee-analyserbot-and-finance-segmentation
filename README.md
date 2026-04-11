@@ -1,14 +1,11 @@
-# Financial-Behavior-Segmentation-and-Advisory-Bot  
-## Project Title: Financial Behavior Segmentation and AI-Driven Investment Advisory System  
+# Financial-Behavior-Segmentation 
+## Project Title: Financial Behavior Segmentation and clustering
 
 ### PROJECT OVERVIEW  
 
 - In this project, I assume the role of a Data Scientist in a banking institution, where I analyzed detailed financial behavior and customer attributes from banking records, and also developed a web-based application that enables customers to evaluate and understand their own financial habits.
 - The primary objective of the project was to uncover distinct financial behavior segments among customers using ```Exploratory Data Analysis (EDA)```, ```feature engineering```, and ```advanced clustering technique```s. Multiple clustering models were evaluated and compared using metrics like silhouette score, and the model with the highest performance was chosen for segmentation.
-- As a practical extension of the analysis, I built a financial analyzer web application called <span style="color: #7f5539">
-  <a href="https://abirammii.github.io/finbee-analyserbot-and-finance-segmentation/" target="_blank">FINBEE</a>
-</span>. FinBee acts as a Smart Financial Advisor Bot that evaluates a user’s monthly income, expenses, and savings, and instantly provides personalized recommendations. It visually represents the financial distribution using charts and suggests saving plans, investment ideas, and budgeting strategies tailored to the user’s profile.
-- This integrated project demonstrates how data science, machine learning, and modern web development (React) can work together to deliver real-time financial intelligence and enhance customer experience for real-world banking use cases.
+
 
 
 ### MODULES OF THE PROJECT  
@@ -476,22 +473,4 @@ print(comparison_df)
 3. Lower Davies–Bouldin Score
   
 - This indicates that K-Means produced **more compact, better-separated, and more meaningful clusters**, while Hierarchical clustering showed higher overlap between groups and weaker structure. Therefore, **K-Means was selected as the final model**, as it generated clearer and more actionable customer segments suitable for real-world financial analysis and recommendation systems.
-
-## 6. Smart Finance Advisory App (FinBee)
-FinBee acts as an intelligent financial analysis assistant that evaluates a user’s **monthly salary, total spending,** and **savings** to understand their financial behavior. Once the user enters their data, FinBee performs spending analysis and identifies how their income is distributed.
-### Automated Financial Profiling
-Based on the analysis, FinBee assigns the user to a suitable financial category (for example, “Starter Saver Plan”) that reflects their current financial habits and stability level.
-### Visual Financial Insights
-At the end of the analysis, FinBee presents the results through clear visualizations:
-1. Donut Chart showing the breakdown of
-- Monthly Expenses
-- Savings
-- Remaining Balance
-2. Line Chart displaying saving tips, weekly or monthly improvement trends, and how the user can gradually increase savings over time.
-### provides Actionable Advice
-Along with visual analytics, FinBee provides personalized suggestions such as:
-- Smart budget planning
-- SIP and mutual fund recommendations
-- Expense management practices
-
 
