@@ -3,7 +3,7 @@
 
 ### PROJECT OVERVIEW  
 
-- In this project, I assume the role of a Data Scientist in a banking institution, where I analyzed detailed financial behavior and customer attributes from banking records, and also developed a web-based application that enables customers to evaluate and understand their own financial habits.
+- In this project, I assume the role of a Data Scientist in a banking institution, where I analyzed detailed financial behavior and customer attributes from banking records.
 - The primary objective of the project was to uncover distinct financial behavior segments among customers using ```Exploratory Data Analysis (EDA)```, ```feature engineering```, and ```advanced clustering technique```s. Multiple clustering models were evaluated and compared using metrics like silhouette score, and the model with the highest performance was chosen for segmentation.
 
 
@@ -15,7 +15,7 @@
 3. Feature Engineering   
 4. Clustering Techniques
 5. Performance and Comparison of Clusters
-6. Smart Finance Advisory App (FinBee)
+
 
 ### DATASET DESCRIPTION  
 
